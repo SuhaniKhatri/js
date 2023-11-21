@@ -1,40 +1,42 @@
-//constructor (singlrton object)
+//constructor (singleton object)
 // Object.create();
 //            and
 //Object literals (multiple-instances)
 
-const mySym = Symbol("Key1");
+const sym = Symbol("myKey");
 
 const jsUser = {
-  name: "Suhani",
-  "last name": "Khatri",
-  [mySym]: "key1Value",
+  name: "suhani",
   age: 22,
-  location: "Jobat",
-  email: "Suhani@gmail.com",
-  lastLoginDays: ["Monday", "Satuarday"],
+  [sym]: "myValue",
+  fullname: "Suhani Khatri",
+  location: "Udaipur",
+  email: "myemail@gmail.com",
+  isLoggedIn: true,
+  lastLogginDays: ["Monday", "Satuarday"],
 };
 
-jsUser.greeting = function () {
+console.log(jsUser.name);
+
+console.log(jsUser["name"]);
+
+// console.log(typeof jsUser.sym);
+
+jsUser.email = "new@gmail.com";
+// console.log(jsUser);
+
+// Object.freeze(jsUser);
+
+// jsUser.email = "yours@gmail.com";
+// console.log(jsUser);
+
+jsUser.greetings = function () {
   console.log("Hello Js User");
 };
 
-console.log(jsUser.greeting);
-
-jsUser.greetingTwo = function () {
+jsUser.greetingsTwo = function () {
   console.log(`Hello Js User ${this.name}`);
 };
 
-jsUser.greetingTwo();
-
-// console.log(jsUser.greeting());
-
-// console.log(jsUser.name);
-// console.log(jsUser[mySym]);
-// console.log(jsUser["last name"]);
-// console.log(jsUser["name"]);
-
-// jsUser.email = "suhani@chatgpt.com";
-// Object.freeze(jsUser);
-// jsUser.email = "suhani@microsoft.com";
-// console.log(jsUser);
+console.log(jsUser.greetings());
+console.log(jsUser.greetingsTwo());

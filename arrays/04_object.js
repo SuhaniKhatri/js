@@ -23,14 +23,14 @@ const obj1 = { 1: "a", 2: "b" };
 const obj2 = { 3: "a", 4: "b" };
 const obj3 = { 5: "a", 6: "b" };
 
-// const obj4 = Object.assign({}, obj1, obj2, obj3);
+// const obj4 = Object.assign({}, obj1, obj2, obj3);  //returns values just like concat
 
 const obj4 = { ...obj1, ...obj2, ...obj3 };
 // console.log(obj4);
 
 // console.log(Object.keys(tinderUser)); //return array of keys
 // console.log(Object.values(tinderUser)); //returns array of values
-// console.log(Object.entries(tinderUser));
+// console.log(Object.entries(tinderUser)); //returns array of keys, value (comma's seperated)
 
 // console.log(tinderUser.hasOwnProperty("isLoggedIn"));
 
@@ -53,3 +53,11 @@ const navbar = ({ Company }) => {
 };
 
 navbar((Company = "hitesh"));
+
+/**********JSON***********/
+
+// {
+//   "name" : "suhani",
+//   "courseName" : "javascript",
+//   "price" : "free"
+// }

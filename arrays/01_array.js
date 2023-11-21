@@ -17,7 +17,7 @@ myArr.unshift(0);
 // console.log(myArr.includes(5));
 // console.log(myArr.indexOf(3));
 
-// const newArr = myArr.join();
+// const newArr = myArr.join();    //join will convert the array into the string (commas seperated)
 
 // console.log(newArr);
 
@@ -25,6 +25,6 @@ myArr.unshift(0);
 
 const numbers = [0, 1, 2, 3, 4, 5];
 
-const num1 = numbers.splice(1, 3);
+const num1 = numbers.splice(1, 3); //splice not only includes last index but it also manipulates the original array
 console.log(num1);
 console.log(numbers);
